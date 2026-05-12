@@ -1,0 +1,236 @@
+{
+  "target": "example.com",
+  "scan_time": "2026-05-12T10:16:24.399265",
+  "ip_info": {
+    "ipv4": "104.20.23.154",
+    "hostname": "No reverse DNS"
+  },
+  "headers": {
+    "url": "https://example.com/",
+    "status_code": 200,
+    "server": "cloudflare",
+    "content_type": "text/html",
+    "present_headers": {},
+    "missing_headers": {
+      "Content-Security-Policy": {
+        "description": "Prevents XSS attacks by defining trusted content sources",
+        "severity": "HIGH"
+      },
+      "Strict-Transport-Security": {
+        "description": "Forces HTTPS connections (prevents SSL stripping)",
+        "severity": "HIGH"
+      },
+      "X-Frame-Options": {
+        "description": "Prevents clickjacking via iframe embedding",
+        "severity": "MEDIUM"
+      },
+      "X-Content-Type-Options": {
+        "description": "Prevents MIME-type sniffing attacks",
+        "severity": "MEDIUM"
+      },
+      "Referrer-Policy": {
+        "description": "Controls referrer information leakage",
+        "severity": "LOW"
+      },
+      "Permissions-Policy": {
+        "description": "Restricts browser feature access (camera, mic, etc.)",
+        "severity": "MEDIUM"
+      },
+      "X-XSS-Protection": {
+        "description": "Legacy XSS filter (deprecated but still informative)",
+        "severity": "LOW"
+      },
+      "Cross-Origin-Opener-Policy": {
+        "description": "Isolates browsing context against cross-origin attacks",
+        "severity": "MEDIUM"
+      },
+      "Cross-Origin-Embedder-Policy": {
+        "description": "Controls cross-origin resource embedding",
+        "severity": "LOW"
+      }
+    },
+    "leaky_headers": {
+      "Server": "cloudflare"
+    },
+    "all_headers": {
+      "Date": "Tue, 12 May 2026 04:46:32 GMT",
+      "Content-Type": "text/html",
+      "Transfer-Encoding": "chunked",
+      "Connection": "keep-alive",
+      "Server": "cloudflare",
+      "last-modified": "Mon, 11 May 2026 20:01:07 GMT",
+      "allow": "GET, HEAD",
+      "Age": "7716",
+      "cf-cache-status": "HIT",
+      "Content-Encoding": "gzip",
+      "CF-RAY": "9fa6c7bb281b46f3-BOM"
+    },
+    "security_score": 0,
+    "error": null
+  },
+  "ssl": {
+    "valid": true,
+    "issuer": "CLOUDFLARE, INC.",
+    "subject": "example.com",
+    "issued_on": "2026-04-02",
+    "expires_on": "2026-07-01",
+    "days_remaining": 50,
+    "san": [
+      "DNS: example.com",
+      "DNS: *.example.com"
+    ],
+    "tls_version": "TLSv1.3",
+    "error": null
+  },
+  "dns": {
+    "A": [
+      "104.20.23.154",
+      "172.66.147.243"
+    ],
+    "MX": [
+      "0 ."
+    ],
+    "NS": [
+      "elliott.ns.cloudflare.com.",
+      "hera.ns.cloudflare.com."
+    ],
+    "TXT": [
+      "\"_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9\"",
+      "\"v=spf1 -all\""
+    ],
+    "CNAME": []
+  },
+  "whois": {
+    "registrar": "RESERVED-Internet Assigned Numbers Authority",
+    "org": "Not disclosed",
+    "country": "Not disclosed",
+    "creation_date": "1995-08-14 04:00:00 UTC",
+    "expiry_date": "2026-08-13 04:00:00 UTC",
+    "updated_date": "2026-01-16 18:26:50 UTC",
+    "name_servers": [
+      "elliott.ns.cloudflare.com",
+      "hera.ns.cloudflare.com"
+    ],
+    "status": [
+      "clientDeleteProhibited",
+      "clientTransferProhibited",
+      "clientUpdateProhibited"
+    ],
+    "emails": [],
+    "dnssec": "signedDelegation",
+    "error": null
+  },
+  "tech": {
+    "technologies": {
+      "CDN / WAF": [
+        "Cloudflare"
+      ]
+    },
+    "raw_signals": [
+      "HEADER \u2192 Cloudflare"
+    ],
+    "generator": null,
+    "error": null
+  },
+  "ports": {
+    "open": [
+      {
+        "port": 21,
+        "service": "FTP",
+        "risk": "Cleartext file transfer"
+      },
+      {
+        "port": 80,
+        "service": "HTTP",
+        "risk": "Unencrypted web traffic"
+      },
+      {
+        "port": 443,
+        "service": "HTTPS",
+        "risk": "Encrypted web traffic"
+      },
+      {
+        "port": 8080,
+        "service": "HTTP-Alt",
+        "risk": "Secondary web app / admin panel"
+      },
+      {
+        "port": 8443,
+        "service": "HTTPS-Alt",
+        "risk": "Alternate HTTPS / admin panel"
+      }
+    ],
+    "closed": [
+      {
+        "port": 22,
+        "service": "SSH",
+        "risk": "Remote shell access"
+      },
+      {
+        "port": 23,
+        "service": "Telnet",
+        "risk": "Cleartext remote access (critical)"
+      },
+      {
+        "port": 25,
+        "service": "SMTP",
+        "risk": "Mail server / open relay"
+      },
+      {
+        "port": 53,
+        "service": "DNS",
+        "risk": "Zone transfer possible"
+      },
+      {
+        "port": 110,
+        "service": "POP3",
+        "risk": "Email retrieval (cleartext)"
+      },
+      {
+        "port": 143,
+        "service": "IMAP",
+        "risk": "Email access"
+      },
+      {
+        "port": 445,
+        "service": "SMB",
+        "risk": "File sharing / EternalBlue"
+      },
+      {
+        "port": 3306,
+        "service": "MySQL",
+        "risk": "Database exposed to internet"
+      },
+      {
+        "port": 3389,
+        "service": "RDP",
+        "risk": "Remote Desktop (brute-force target)"
+      },
+      {
+        "port": 5432,
+        "service": "PostgreSQL",
+        "risk": "Database exposed to internet"
+      },
+      {
+        "port": 6379,
+        "service": "Redis",
+        "risk": "Often unauthenticated"
+      },
+      {
+        "port": 8888,
+        "service": "HTTP-Dev",
+        "risk": "Dev server / Jupyter Notebook"
+      },
+      {
+        "port": 9200,
+        "service": "Elasticsearch",
+        "risk": "Often unauthenticated"
+      },
+      {
+        "port": 27017,
+        "service": "MongoDB",
+        "risk": "Database exposed to internet"
+      }
+    ]
+  }
+}

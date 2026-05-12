@@ -1,0 +1,85 @@
+======================================================================
+  ADVANCED RECON TOOL — RECONNAISSANCE REPORT
+======================================================================
+  Target  : example.com
+  Date    : 20260512_101659
+  Tool    : Advanced Recon & Tech Fingerprinting Tool v1.0
+======================================================================
+
+[1] IP INFORMATION
+----------------------------------------------------------------------
+  IPv4 Address : 104.20.23.154
+  Hostname     : No reverse DNS
+
+[2] SERVER INFORMATION
+----------------------------------------------------------------------
+  URL         : https://example.com/
+  Status Code : 200
+  Server      : cloudflare
+  Content-Type: text/html
+
+[3] SECURITY HEADERS (Score: 0/100)
+----------------------------------------------------------------------
+  PRESENT:
+  MISSING:
+    ✗ Content-Security-Policy
+    ✗ Strict-Transport-Security
+    ✗ X-Frame-Options
+    ✗ X-Content-Type-Options
+    ✗ Referrer-Policy
+    ✗ Permissions-Policy
+    ✗ X-XSS-Protection
+    ✗ Cross-Origin-Opener-Policy
+    ✗ Cross-Origin-Embedder-Policy
+
+[4] SSL/TLS INFORMATION
+----------------------------------------------------------------------
+  Valid       : True
+  Issuer      : CLOUDFLARE, INC.
+  Issued On   : 2026-04-02
+  Expires On  : 2026-07-01
+  Days Left   : 50
+  TLS Version : TLSv1.3
+
+[5] DNS RECORDS
+----------------------------------------------------------------------
+  A:
+    → 104.20.23.154
+    → 172.66.147.243
+  MX:
+    → 0 .
+  NS:
+    → elliott.ns.cloudflare.com.
+    → hera.ns.cloudflare.com.
+  TXT:
+    → "_k2n1y4vw3qtb4skdx9e7dxt97qrmmq9"
+    → "v=spf1 -all"
+  CNAME:
+
+[6] WHOIS INFORMATION
+----------------------------------------------------------------------
+  Registrar    : RESERVED-Internet Assigned Numbers Authority
+  Organization : Not disclosed
+  Created      : 1995-08-14 04:00:00 UTC
+  Expires      : 2026-08-13 04:00:00 UTC
+  Updated      : 2026-01-16 18:26:50 UTC
+
+[7] TECHNOLOGY FINGERPRINTING
+----------------------------------------------------------------------
+  CDN / WAF: Cloudflare
+
+[8] PORT SCAN RESULTS
+----------------------------------------------------------------------
+  OPEN     21/tcp  FTP              Cleartext file transfer
+  OPEN     80/tcp  HTTP             Unencrypted web traffic
+  OPEN    443/tcp  HTTPS            Encrypted web traffic
+  OPEN   8080/tcp  HTTP-Alt         Secondary web app / admin panel
+  OPEN   8443/tcp  HTTPS-Alt        Alternate HTTPS / admin panel
+
+======================================================================
+  DISCLAIMER
+----------------------------------------------------------------------
+  This tool is developed for educational and authorized security
+  testing purposes only. Unauthorized use against systems you do
+  not own or have explicit permission to test is illegal.
+======================================================================
